@@ -15,16 +15,23 @@
             chesse: "cheddar ",
             prepare: function() {
                 return "i want sandwitch with" + {
-                    brad
-                } + chesse
+                    brad,
+                    chesse
+                }
             },
             make: function() {
+                var that = sandwitch
                 windows.setTimeout(() => {
                     console.log(prepare)
                 }, 500);
             }
 
+
         }
+        const btn = document.getElementById("btn")
+        btn.addEventListener('click', function() {
+            sandwitch.make()
+        })
     </script>
 </head>
 
