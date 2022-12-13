@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>generators</title>
+    <title>proxy</title>
 </head>
 
 <body>
     <script>
-        function getnomes() {
-            console.log("william")
-            console.log("jonas")
-            console.log("gabriel")
-        }
-        getnomes();
+        let obj = {
+            name: "william",
+            age: 26
+
+        };
+        let proxy = new Proxy(obj, {
+            get(target, name) {
+                console.log("alguem está buscando noem")
+            }
+        })
     </script>
 </body>
 
